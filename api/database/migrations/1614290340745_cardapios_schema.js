@@ -8,6 +8,7 @@ class CardapiosSchema extends Schema {
     this.create('cardapios', (table) => {
       table.increments()
       table.timestamps()
+      table.string('nome', 254).notNullable()
     })
   }
 
