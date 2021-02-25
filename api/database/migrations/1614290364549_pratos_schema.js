@@ -8,6 +8,8 @@ class PratosSchema extends Schema {
     this.create('pratos', (table) => {
       table.increments()
       table.timestamps()
+      table.string('nome', 254).notNullable()
+      table.string('valor', 254).notNullable()
     })
   }
 
