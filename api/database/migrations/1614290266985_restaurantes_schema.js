@@ -8,6 +8,8 @@ class RestaurantesSchema extends Schema {
     this.create('restaurantes', (table) => {
       table.increments()
       table.timestamps()
+      table.string('nome', 254).notNullable()
+      table.string('endereco', 254).notNullable()
     })
   }
 
