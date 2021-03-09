@@ -9,7 +9,8 @@ class PratosSchema extends Schema {
       table.increments()
       table.timestamps()
       table.string('nome', 254).notNullable()
-      table.string('valor', 254).notNullable()
+      table.float('valor').notNullable()
+      table.integer('id_cardapio').notNullable().unsigned().references('id').inTable('cardapios').onDelete('CASCADE').onUpdate('CASCADE')
     })
   }
 

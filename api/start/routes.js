@@ -19,3 +19,8 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+//get:mostra
+//post:cria
+//put:Atualiza
+//Delete:remove
+Route.post('/users','UserController.store')
