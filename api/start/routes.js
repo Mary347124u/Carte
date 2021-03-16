@@ -23,4 +23,15 @@ Route.get('/', () => {
 //post:cria
 //put:Atualiza
 //Delete:remove
+
+//Rotas de usuario
 Route.post('/users','UserController.store')
+Route.delete('/users/:id','UserController.destroy')
+Route.put('/users/:id','UserController.update')
+Route.get('/users','UserController.show')
+
+//Rotas de restaurante
+Route.post('/restaurantes','RestauranteController.store')
+Route.delete('/restaurantes/:id','RestauranteController.destroy')
+Route.put('/restaurantes/:id','RestauranteController.update')
+Route.get('/restaurantes','RestauranteController.show')
