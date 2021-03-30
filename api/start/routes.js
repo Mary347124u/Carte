@@ -35,3 +35,17 @@ Route.post('/restaurantes','RestauranteController.store')
 Route.delete('/restaurantes/:id','RestauranteController.destroy')
 Route.put('/restaurantes/:id','RestauranteController.update')
 Route.get('/restaurantes','RestauranteController.show')
+
+//Rotas de pratos
+Route.post('/pratos','PratoController.store')
+Route.delete('/pratos/:id','PratoController.destroy')
+Route.put('/pratos/:id','PratoController.update')
+Route.get('/pratos','PratoController.show')
+
+//Rotas de cardapios
+Route.post('/cardapios','CardapioController.store')
+Route.delete('/cardapios/:id','CardapioController.destroy')
+Route.put('/cardapios/:id','CardapioController.update')
+Route.get('/cardapios','CardapioController.show')
+
+

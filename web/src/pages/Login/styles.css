@@ -1,0 +1,12 @@
+.login {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    height:calc(100vh - 50px);
+    position:relative;
+}
+
+.login img{
+    height:400px;
+
+}

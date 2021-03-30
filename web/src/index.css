@@ -1,0 +1,12 @@
+:root{
+    height: 100vh;                      
+    background-color: #D51736;
+    font-family: 'Spinnaker';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}

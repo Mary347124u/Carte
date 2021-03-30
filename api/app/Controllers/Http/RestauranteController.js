@@ -9,8 +9,8 @@ class RestauranteController {
         return response.send(restaurante_criado);
     }
     async destroy ({params, response}) {
-        const restaurante = await Restaurante.find(params.id);
-        await Restaurante.delete();
+        const restaurantes = await Restaurante.find(params.id);
+        await restaurante.delete();
         return response.send(restaurante)
     }
     async show ({response}) {

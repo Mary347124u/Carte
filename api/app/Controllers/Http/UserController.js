@@ -16,7 +16,7 @@ class UserController {
         return response.send(usuario_criado);
     }
     async destroy ({params, response}) {
-        const user = await User.find(params.id);
+        const users = await User.find(params.id);
         await user.delete();
         return response.send(user)
     }
