@@ -6,7 +6,11 @@ export default function Cadastro(){
     const [formulario, setFormulario]= useState({})
     async function enviar(e){
         e.preventDefault();
-        const usuario = await api.post('users', formulario)
+        const usuario = await api.post('users', {
+            nome: formulario.nome,
+            email: formulario.email,
+            senha: formulario.senha
+        })
         const id_usuario = usuario.data.id
         await api.post('restaurantes', {
             nome:formulario.nomeDoRestaurante,

@@ -1,0 +1,116 @@
+{
+  "error": {
+    "message": "insert into `users` (`created_at`, `email`, `endereco`, `nome`, `nomeDoRestaurante`, `senha`, `updated_at`) values ('2021-04-06 20:15:02', 'adelia2@gmail.com', 'Rua dos Bobos 155', 'Adelia', 'Madero', '$2a$10$XGhIIrobYDpJNaNp.kXZXu2Zv3bJMOznyfyju5eW9/3277qad8Txa', '2021-04-06 20:15:02') - SQLITE_ERROR: table users has no column named endereco",
+    "name": "Error",
+    "status": 500,
+    "frames": [
+      {
+        "file": "node_modules\\knex\\lib\\dialects\\sqlite3\\index.js",
+        "filePath": "C:\\Users\\DELL\\Documents\\Carte\\api\\node_modules\\knex\\lib\\dialects\\sqlite3\\index.js",
+        "method": "Client_SQLite3._query",
+        "line": 108,
+        "column": 12,
+        "context": {
+          "start": 103,
+          "pre": "\n      default:\n        callMethod = 'all';\n    }\n",
+          "line": "    return new _bluebird.default(function (resolver, rejecter) {",
+          "post": "      if (!connection || !connection[callMethod]) {\n        return rejecter(new Error(`Error calling ${callMethod} on connection.`));\n      }\n\n      connection[callMethod](obj.sql, obj.bindings, function (err, response) {"
+        },
+        "isModule": true,
+        "isNative": false,
+        "isApp": false
+      },
+      {
+        "file": "node_modules\\knex\\lib\\client.js",
+        "filePath": "C:\\Users\\DELL\\Documents\\Carte\\api\\node_modules\\knex\\lib\\client.js",
+        "method": "Client_SQLite3.query",
+        "line": 192,
+        "column": 17,
+        "context": {
+          "start": 187,
+          "pre": "      __knexTxId\n    }, obj));\n    debugQuery(obj.sql, __knexTxId);\n    debugBindings(obj.bindings, __knexTxId);\n    obj.sql = this.positionBindings(obj.sql);",
+          "line": "    return this._query(connection, obj).catch(err => {",
+          "post": "      err.message = this._formatQuery(obj.sql, obj.bindings) + ' - ' + err.message;\n      this.emit('query-error', err, (0, _lodash.assign)({\n        __knexUid,\n        __knexTxId\n      }, obj));"
+        },
+        "isModule": true,
+        "isNative": false,
+        "isApp": false
+      },
+      {
+        "file": "node_modules\\knex\\lib\\runner.js",
+        "filePath": "C:\\Users\\DELL\\Documents\\Carte\\api\\node_modules\\knex\\lib\\runner.js",
+        "method": null,
+        "line": 138,
+        "column": 36,
+        "context": {
+          "start": 133,
+          "pre": "    this.builder.emit('query', (0, _lodash.assign)({\n      __knexUid,\n      __knexTxId\n    }, obj));\n    const runner = this;",
+          "line": "    let queryPromise = this.client.query(this.connection, obj);",
+          "post": "\n    if (obj.timeout) {\n      queryPromise = queryPromise.timeout(obj.timeout);\n    } // Await the return value of client.processResponse; in the case of sqlite3's\n    // dropColumn()/renameColumn(), it will be a Promise for the transaction"
+        },
+        "isModule": true,
+        "isNative": false,
+        "isApp": false
+      },
+      {
+        "file": "node_modules\\knex\\lib\\runner.js",
+        "filePath": "C:\\Users\\DELL\\Documents\\Carte\\api\\node_modules\\knex\\lib\\runner.js",
+        "method": null,
+        "line": 47,
+        "column": 21,
+        "context": {
+          "start": 42,
+          "pre": "\n      if ((0, _lodash.isArray)(sql)) {\n        return runner.queryArray(sql);\n      }\n",
+          "line": "      return runner.query(sql);",
+          "post": "    }) // If there are any \"error\" listeners, we fire an error event\n    // and then re-throw the error to be eventually handled by\n    // the promise chain. Useful if you're wrapping in a custom `Promise`.\n    .catch(function (err) {\n      if (runner.builder._events && runner.builder._events.error) {"
+        },
+        "isModule": true,
+        "isNative": false,
+        "isApp": false
+      },
+      {
+        "file": "internal/timers.js",
+        "filePath": "internal/timers.js",
+        "method": "processImmediate",
+        "line": 461,
+        "column": 21,
+        "context": {},
+        "isModule": false,
+        "isNative": true,
+        "isApp": false
+      },
+      {
+        "file": "node_modules\\knex\\lib\\runner.js",
+        "filePath": "C:\\Users\\DELL\\Documents\\Carte\\api\\node_modules\\knex\\lib\\runner.js",
+        "method": "Runner.run",
+        "line": 33,
+        "column": 30,
+        "context": {
+          "start": 28,
+          "pre": "  // \"Run\" the target, calling \"toSQL\" on the builder, returning\n  // an object or array of queries to run, each of which are run on\n  // a single connection.\n  run() {\n    const runner = this;",
+          "line": "    return _bluebird.default.using(this.ensureConnection(), function (connection) {",
+          "post": "      runner.connection = connection;\n      runner.client.emit('start', runner.builder);\n      runner.builder.emit('start', runner.builder);\n      const sql = runner.builder.toSQL();\n"
+        },
+        "isModule": true,
+        "isNative": false,
+        "isApp": false
+      },
+      {
+        "file": "node_modules\\knex\\lib\\interface.js",
+        "filePath": "C:\\Users\\DELL\\Documents\\Carte\\api\\node_modules\\knex\\lib\\interface.js",
+        "method": "Builder.Target.then",
+        "line": 23,
+        "column": 43,
+        "context": {
+          "start": 18,
+          "pre": "\n\n  Target.prototype.then = function ()\n  /* onFulfilled, onRejected */\n  {",
+          "line": "    let result = this.client.runner(this).run();",
+          "post": "\n    if (this.client.config.asyncStackTraces) {\n      result = result.catch(err => {\n        err.originalStack = err.stack;\n        const firstLine = err.stack.split('\\n')[0];"
+        },
+        "isModule": true,
+        "isNative": false,
+        "isApp": false
+      }
+    ]
+  }
+}
