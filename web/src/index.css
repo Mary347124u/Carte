@@ -10,3 +10,41 @@
     outline: 0;
     box-sizing: border-box;
 }
+h1{
+    font-family: Spinnaker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+}
+input{
+    background: #FFFFFF;
+    border-radius: 38px;
+    font-family: Spinnaker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.065em;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+}
+button{
+    background: #EC3C3B;
+    border-radius: 38px;
+    font-family: Spinnaker;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.065em;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    border: none;
+}

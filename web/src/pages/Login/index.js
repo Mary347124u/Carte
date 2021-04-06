@@ -7,8 +7,8 @@ export default function Login(){
             <img src={LoginImage}></img>
            <form>
                <h1>ENTRE EM SEU RESTAURANTE</h1>
-               <input placeholder="Email"></input>
-               <input placeholder="Senha"></input>
+               <input placeholder="Email" type="email"></input>
+               <input placeholder="Senha" type="password"></input>
                <button>Login</button>
            </form>
         </div>

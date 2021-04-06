@@ -1,4 +1,4 @@
-.login {
+.cadastro {
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -6,23 +6,23 @@
     position:relative;
 }
 
-.login img{
+.cadastro img{
     height:400px;
 
 }
-.login form{
+.cadastro form{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.login form h1{
+.cadastro form h1{
     margin-bottom: 35px;
 }
-.login form input{
+.cadastro form input{
     margin-bottom: 15px;
     width: 250px;
 }
-.login form button{
+.cadastro form button{
     width: 250px;
     margin-top: 20px;
 }
